@@ -3,7 +3,7 @@ class Solution:
         res = []
         nums.sort()
         n = len(nums)
-        def backtrack(curr, used, currlen):
+        def helper(curr, used, currlen):
             if currlen == n:
                 res.append(curr)
                 return 0
@@ -12,13 +12,13 @@ class Solution:
                 if used[i]:
                     i += 1
                     continue
-                backtrack(curr + [nums[i]], used[:i] + [True] + used[i + 1:], currlen + 1) # if i > n, a[i:] = []
+                helper(curr + [nums[i]], used[:i] + [True] + used[i + 1:], currlen + 1) # if i > n, a[i:] = []
                 i += 1
                 while i < n and nums[i] == nums[i - 1]:
                     i += 1
             return 0
                 
                 
-        backtrack([], [False] * n, 0)
+        helper([], [False] * n, 0)
         return res
 
