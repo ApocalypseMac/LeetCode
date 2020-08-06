@@ -87,7 +87,7 @@ def pmt(s: str):
 
 上述算法的时间复杂度为 $O(m)$ [^1]
 
-[^1]: 这里对于复杂度的证明从略，可以参考 CLRS 32.4. 事实上通过 PMT 数组的增长特性我们就可以发现，指针 `j` 回跳的次数为 O(m) 次。
+[^1]: 这里对于复杂度的证明从略，可以参考 CLRS 32.4. 事实上通过 PMT 数组的增长特性我们就可以发现，指针 `j` 回跳的次数为 $O(m)$ 次。
 
 
 
@@ -102,11 +102,9 @@ def kmp(haystack: str, needle: str):
     n = len(haystack)
     m = len(needle)
     def pmt(s):
-        # refer from section 1.2
+        # refer to section 1.2
         pass
 
-    ans = pmt(needle) # pmt
-    i, j = 0, 0
     ans = pmt(needle) # pmt
     i, j = 0, 0
     while i < n:
