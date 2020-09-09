@@ -5,6 +5,9 @@
 ## Notes
 - 刷题过程整理的笔记之类的东西。
 
+### Notes/Templates
+- 放模板的地方（？
+
 ## Code
 - 代码，一周目应该基本用 Python3.
 
