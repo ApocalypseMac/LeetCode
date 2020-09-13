@@ -1,5 +1,8 @@
+from collections import deque
 class Solution:
     def isTransformable(self, s: str, t: str) -> bool:
+        # old method (failed:"54312", "21345")
+        '''
         n = len(s)
         freqs = [0] * 10
         freqt = [0] * 10
@@ -42,4 +45,19 @@ class Solution:
             for j in range(k):
                 if greaters[i][j] > greatert[i][j]:
                     return False
+        return True
+        '''
+        # queue
+        n = len(s)
+        pos = [deque([]) for _ in range(10)]
+        for i in range(n):
+            pos[ord(s[i]) - 48].append(i)
+        for i in range(n):
+            indext = ord(t[i]) - 48
+            if len(pos[indext]) == 0:
+                return False
+            for j in range(indext):
+                if len(pos[j]) and pos[j][0] < pos[indext][0]:
+                    return False
+            pos[indext].popleft()
         return True
