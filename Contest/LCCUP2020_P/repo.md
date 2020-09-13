@@ -1,4 +1,4 @@
-# LCCUP 2020 Personal 
+# LCCUP 2020 Solo Competition
 
 16/25
 
