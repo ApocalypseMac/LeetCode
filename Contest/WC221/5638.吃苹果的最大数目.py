@@ -15,6 +15,8 @@ class Solution:
                 key, val = queue.peekitem(0)
                 if val == 1:
                     del queue[key]
+                else:
+                    queue[key] -= 1
                 res += 1
             if i in queue:
                 queue.pop(i) 
@@ -23,8 +25,9 @@ class Solution:
             key, val = queue.peekitem(0)
             if val == 1:
                 queue.pop(key)
+            else:
+                    queue[key] -= 1
             res += 1
-            
             if days in queue:
                 queue.pop(days)
             days += 1
