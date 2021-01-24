@@ -9,7 +9,7 @@ class UF:
             self.parent[i] = self.find(self.parent[i])
         return self.parent[i]
 
-    def union(self, i, j): # return if already connected
+    def union(self, i, j): # return True if already connected
         pi, pj = self.find(i), self.find(j)
         if pi != pj:
             if self.count[pi] < self.count[pj]:
