@@ -17,7 +17,8 @@ class Solution:
         def fact(k):
             fac = {}
             k1 = k
-            for i in range(2, k + 1):
+            for i in range(2, min(k + 1, 101)): 
+                # if one number < 10 ^ 4 have prime factor larger than 100, it must be prime
                 if i > k1:
                     break
                 while k1 % i == 0:
@@ -25,6 +26,8 @@ class Solution:
                     if i not in fac:
                         fac[i] = 0
                     fac[i] += 1
+            if k1 > 1: 
+                fac[k1] = 1
             # print(fac)
             return list(fac.values())
         
