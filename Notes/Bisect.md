@@ -138,5 +138,3 @@ def bisect_right(a: List[int], target: int):
 ## 参考文献
 
 - Python source code: [bisect](https://github.com/python/cpython/blob/3.8/Lib/bisect.py)
-
-- [二分查找算法详解](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/solution/er-fen-cha-zhao-suan-fa-xi-jie-xiang-jie-by-labula/) -- labuladong
